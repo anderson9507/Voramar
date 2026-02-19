@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gelateria Voramar · Cunit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <nav class="nav">
+      <div class="nav__brand">
+        <span class="nav__logo">Voramar</span>
+        <span class="nav__subtitle">Heladería artesanal en Cunit</span>
+      </div>
+      <button class="nav__toggle" aria-label="Abrir/cerrar menú">
+        ☰
+      </button>
+      <ul class="nav__links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre">Sobre nosotros</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+      <div class="hero__content">
+        <h1>Gelateria Voramar</h1>
+        <p>Helados artesanos frente al mar</p>
+        <p class="hero__note">
+          <strong>Estado actual:</strong> Cerrado temporalmente (Fuera de temporada). 
+          Horarios estimados: Lunes-Viernes 10:00 - 00:00 | Fin de semana 10:00 - 01:30
+        </p>
+        <a href="#carta" class="btn btn--primary">Ver la carta</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section" id="carta">
+      <div class="section__header">
+        <h2>Nuestra carta</h2>
+        <p>Productos organizados en tarjetas, pensadas para ver cómodamente en móvil y ordenador.</p>
+      </div>
+
+      <div class="filters">
+        <button class="chip chip--active" data-category="all">Todo</button>
+        <button class="chip" data-category="Helados artesanos">Helados</button>
+        <button class="chip" data-category="Crepes y gofres">Dulces</button>
+        <button class="chip" data-category="Bebidas y cafetería">Bebidas</button>
+        <button class="chip" data-category="Salado">Salado</button>
+      </div>
+
+      <div class="menu-scroll" id="menu-container" aria-live="polite">
+        <!-- Las tarjetas de la carta se insertan dinámicamente con JavaScript -->
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacto">
+      <div class="section__header">
+        <h2>Cómo llegar y contacto</h2>
+        <p>Visítanos en el Passeig Marítim de Cunit, frente al mar.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Dirección</h3>
+          <p class="contact-card__text">
+            Passeig Marítim, 7<br />
+            43881 Cunit, Tarragona<br />
+            <span class="contact-card__hint">Terraza frente al mar</span>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Horario</h3>
+          <ul class="schedule">
+            <li><strong>Lunes - Viernes:</strong> 10:00 - 00:00</li>
+            <li><strong>Sábado - Domingo:</strong> 10:00 - 01:30</li>
+          </ul>
+          <p class="contact-card__hint">
+            Horarios sujetos a cambios según temporada. Actualmente cerrado temporalmente.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Redes sociales</h3>
+          <p class="contact-card__text">
+            <a href="https://www.instagram.com/voramar_cunit/" target="_blank" rel="noopener noreferrer">Instagram</a><br />
+            <a href="https://www.facebook.com/voramarheladeria/?locale=es_ES" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Servicios</h3>
+          <ul class="schedule">
+            <li>Terraza frente al mar</li>
+            <li>Baños para clientes</li>
+            <li>Pago con tarjeta y NFC</li>
+            <li>Sin servicio a domicilio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="section__header">
+        <h2>Sobre nosotros</h2>
+        <p>Un rincón frente al mar para disfrutar sin prisa.</p>
+      </div>
+
+      <div class="about">
+        <p class="about__lead">
+          En Gelateria Voramar no solo servimos helados; creamos momentos de pausa y placer.
+          Ubicados en la frontera perfecta entre Segur de Calafell y Cunit, nuestra terraza es el
+          refugio ideal para quienes buscan calidad artesanal con el sonido de las olas de fondo.
+          Desde nuestros batidos cremosos hasta nuestra famosa horchata, cada producto es seleccionado
+          con mimo para que tu única preocupación sea elegir qué sabor probar hoy.
+        </p>
+
+        <div class="about__facts">
+          <div class="about__fact">
+            <h3>Ubicación</h3>
+            <p>Passeig Marítim, 7 · Cunit</p>
+          </div>
+          <div class="about__fact">
+            <h3>Ambiente</h3>
+            <p>Terraza frente al mar</p>
+          </div>
+          <div class="about__fact">
+            <h3>Especialidad</h3>
+            <p>Horchata artesana y batidos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      &copy; <span id="year"></span> Gelateria Voramar · Cunit, Tarragona.
+      <br />
+      <small>Passeig Marítim, 7 · 43881 Cunit</small>
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
