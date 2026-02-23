@@ -60,6 +60,7 @@ body {
   border-radius: 10px;
   padding: 0.25rem;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 div img {
@@ -70,9 +71,9 @@ div img {
 .imgs_container_item div img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 a {
