@@ -36,9 +36,43 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img {
-  max-width: 100%;
+
+.imgs_container {
+  width: 100%;
+  height: auto;
+  /* contenedor principal: ocupa el ancho y centra el bloque interior */
   display: block;
+  margin: 0 auto;
+  padding-inline: 0.6rem;
+}
+
+.imgs_container_item {
+  /* usar grid para columnas responsivas dentro del wrapper */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.imgs_container_item div {
+  /* tarjeta que contiene la imagen */
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.25rem;
+  overflow: hidden;
+}
+
+div img {
+  max-width: 100%;
+  height: auto;
+}
+
+.imgs_container_item div img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 a {
