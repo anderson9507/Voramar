@@ -49,7 +49,7 @@ body {
 .imgs_container_item {
   /* usar grid para columnas responsivas dentro del wrapper */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(1, 1fr);
   gap: 10px;
   width: 100%;
 }
@@ -573,10 +573,24 @@ ul {
   }
 }
 
+
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
     transition: none !important;
+  }
+}
+
+/* Mobile-first responsive: 1 col default, 2 cols >=768px (tablet), 4 cols >=1024px (escritorio) */
+@media (min-width: 768px) {
+  .imgs_container_item {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .imgs_container_item {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
